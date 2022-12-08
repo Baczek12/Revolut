@@ -1,0 +1,191 @@
+:root{
+    --white:whitesmoke;
+    --blue:rgb(78, 78, 171);
+    --black:black;
+    --gray:gray;
+}
+
+
+*{
+    margin:0;
+    box-sizing: border-box ;
+    padding:0;
+}
+body{
+    min-height: 100vh;
+    overflow:hidden;
+    background: var(--white);
+}
+
+script{
+    visibility:hidden;
+}
+
+.Selectors{
+    position: relative;
+    width: 100%;
+}
+
+.Navigation{
+    width: 300px;
+    height:100%;
+    position:fixed;
+    background-color: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+    border-top:0px solid var(--blue)
+}
+
+
+.Navigation ul li:nth-child(1){
+    font-size: 50px;
+    margin-bottom: 40px;
+    pointer-events: none;
+    font-family: cursive, Bush Script MT;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    background:var(--white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--black);
+}
+.Navigation ul{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.Navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style:none;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+    font-family: cursive, Bush Script MT;
+    letter-spacing: 2px;
+   
+    
+}
+
+.Navigation ul li:hover{
+    background: var(--white);
+}
+
+.Navigation ul li a{
+    position:relative;
+    display: block;
+    width: 100%;
+    display:flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.Navigation ul li:hover a{
+    color: var(--blue);
+
+}
+.Navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+
+}
+.Navigation ul li a .icon ion-icon{
+    font-size: 1.75em;
+ 
+}
+.Navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height:  60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+.Navigation ul li:hover a::before{
+    content:  '';
+    position: absolute;
+    right: 0;
+    top: -60px;
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 50% ;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+
+}
+.Navigation ul li:hover a::after{
+    content:  '';
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 50% ;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+    
+}
+
+
+/*Search panel*/
+
+.Container{
+    padding-top: 20px;
+    padding-left:30px;
+    width: 100%;
+    left: 300px;
+    max-height: 100vh;
+    position:absolute;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    align-items: center; 
+    background-size: cover;
+}
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    min-width: 100px;
+    background: rgba(203, 192, 192, 0.7) ;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+
+}
+.search-bar input{
+    padding-left: 20px;
+    background: transparent;
+    flex:1;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    font-family: cursive, Bush Script MT;
+    letter-spacing: 2px;
+    backdrop-filter: blur(4px) saturate(180%) ;
+}
+::placeholder{
+    color: var(--black);
+}
+.search-bar button img{
+   width: 25px;
+
+}
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    background: var(--white);
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+
+}
+/*cards*/
